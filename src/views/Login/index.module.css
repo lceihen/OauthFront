@@ -1,0 +1,47 @@
+.contain {
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.contain_innerContain {
+  width: 80%;
+  max-width: 500px;
+  min-width: 325px;
+  height: 500px;
+  box-shadow: 2px 2px 2px 2px grey;
+  border-radius: 6px;
+}
+
+.innerContain_header {
+  height: 100px;
+  margin-bottom: 40px;
+  line-height: 100px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.form {
+  /* width: 300px; */
+}
+.contain_form {
+  display: flex;
+  justify-content: center;
+}
+.form_item_remember {
+  display: flex;
+  justify-content: space-between;
+}
+.btn_contain {
+  display: flex;
+  justify-content: center;
+  /* width: 300px; */
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+.btn_submit {
+  width: 100%;
+}
