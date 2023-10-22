@@ -20,7 +20,7 @@ console.log("process.env.NODE_ENV---", process.env.NODE_ENV);
 const BaseUrl =
   process.env.NODE_ENV === "development"
     ? "http://127.0.0.1:3000"
-    : `https://authserve.abclive.cloud`;
+    : `https://authserver.abclive.cloud`;
 
 const handletransformData = (data: any, method: string, headers: any) => {
   if (method === "GET") {
