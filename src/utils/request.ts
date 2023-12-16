@@ -1,3 +1,5 @@
+import { handleGetCurrentEnv } from ".";
+
 export const handleGetParamString = (data: any = {}) => {
   const queryArray: Array<string> = [];
   Object.keys(data).map((key) => {
@@ -16,11 +18,17 @@ interface IRequestProps {
 }
 
 console.log("process.env.NODE_ENV---", process.env.NODE_ENV);
+const handleGetBackendApi = () => {
+  if (process.env.NODE_ENV === "production") {
+    return "https://authserver.abclive.cloud";
+  } else if (process.env.NODE_ENV === "beta") {
+    return "https://authserver-beta.abclive.cloud";
+  } else {
+    return "http://127.0.0.1:3000";
+  }
+};
 
-const BaseUrl =
-  process.env.NODE_ENV === "development"
-    ? "http://127.0.0.1:3000"
-    : `https://authserver.abclive.cloud`;
+const BaseUrl = handleGetBackendApi();
 
 const handletransformData = (data: any, method: string, headers: any) => {
   if (method === "GET") {

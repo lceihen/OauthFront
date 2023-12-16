@@ -1,9 +1,16 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@ant-design/icons':
     specifier: ^5.1.4
     version: 5.1.4(react-dom@18.2.0)(react@18.2.0)
+  '@lceihen/front-utils':
+    specifier: ^4.0.0
+    version: 4.0.0
   '@types/node':
     specifier: 20.2.5
     version: 20.2.5
@@ -16,6 +23,9 @@ dependencies:
   antd:
     specifier: ^5.5.2
     version: 5.5.2(react-dom@18.2.0)(react@18.2.0)
+  cross-env:
+    specifier: ^7.0.3
+    version: 7.0.3
   eslint:
     specifier: 8.41.0
     version: 8.41.0
@@ -173,6 +183,11 @@ packages:
 
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: false
+
+  /@lceihen/front-utils@4.0.0:
+    resolution: {integrity: sha512-5iIBq1zvdBR30akZ1a9t+emtrpzq7KKf5If5qZJsfyH+KyhwoTQc8cDeRIgsVxpSm4s9h1Nnf0xYg9YoO2S0WA==}
+    engines: {node: '>=16.14.0'}
     dev: false
 
   /@next/env@13.4.4:
@@ -795,6 +810,14 @@ packages:
     resolution: {integrity: sha512-2KV8NhB5JqC3ky0r9PMCAZKbUHSwtEo4CwCs0KXgruG43gX5PMqDEBbVU4OUzw2MuAWUfsuFmWvEKG5QRfSnJA==}
     dependencies:
       toggle-selection: 1.0.6
+    dev: false
+
+  /cross-env@7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
     dev: false
 
   /cross-spawn@7.0.3:
