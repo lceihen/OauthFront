@@ -19,6 +19,7 @@ console.log("process.env.NODE_ENV---", process.env.NODE_ENV);
 const handleGetBackendApi = () => {
   if (process.env.NODE_ENV === "production") {
     return "https://authserver.abclive.cloud";
+    // @ts-ignore
   } else if (process.env.NODE_ENV === "beta") {
     return "https://authserver-beta.abclive.cloud";
   } else {
