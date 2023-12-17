@@ -16,6 +16,8 @@ ADD . /code
 
 RUN pnpm run build
 
+RUN echo $SELFHOST$SELF_DOMAIN_NAME.abclive.cloud
+
 EXPOSE 3000
 
 # FROM nginx:alpine
