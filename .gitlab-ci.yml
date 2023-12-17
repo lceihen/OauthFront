@@ -24,5 +24,5 @@ deploy:
     - echo $GIT_BRANCH
     - cat Dockerfile
     - cat docker-compose.yaml
-    - echo ${APP}${GIT_BRANCH}.abclive.cloud  
+    - echo https://${APP}${GIT_BRANCH}.abclive.cloud  
  
