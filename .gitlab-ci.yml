@@ -19,7 +19,7 @@ deploy:
       else \
       export GIT_BRANCH=-$CI_COMMIT_REF_NAME ; \
       echo hhh2; \
-      sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile; \
+      sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile; fi;
   script:
     # - docker-compose  up -d --build
     - echo $GIT_BRANCH
