@@ -13,14 +13,14 @@ deploy:
     - front-docker-1
   before_script:
     - if [[ "$CI_COMMIT_REF_NAME" == "master" ]] || [[ "$CI_COMMIT_REF_NAME" == "main" ]]; then \
-    export GIT_BRANCH=''; \
-    sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "prd"]/g' Dockerfile; \
-    else export GIT_BRANCH=-$CI_COMMIT_REF_NAME ; sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile; fi;
+      export GIT_BRANCH=''; \
+      sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "prd"]/g' Dockerfile; \
+      else export GIT_BRANCH=-$CI_COMMIT_REF_NAME ; sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile; fi;
     # 设置容器名字
     # - sed -i 's/servername/'"$CI_COMMIT_REF_NAME"'/g' docker-compose.yaml
     # - if [[ "$CI_COMMIT_REF_NAME" == "master" ]] || [[ "$CI_COMMIT_REF_NAME" == "main" ]]; then ; else sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile;  fi;
-    - cat docker-compose-updated.yaml
+    - cat docker-compose-updated.yaml 
   script:
     - docker-compose  up -d --build
-    - echo ${APP}${GIT_BRANCH}.abclive.cloud
+    - echo ${APP}${GIT_BRANCH}.abclive.cloud  
  
