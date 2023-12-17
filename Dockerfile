@@ -22,4 +22,4 @@ EXPOSE 3000
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
 # COPY --from=builder code/dist /usr/share/nginx/html
 
-CMD ["pnpm" ,"run", "start"]
+CMD LC-RUNCOMMAND
