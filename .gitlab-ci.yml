@@ -17,5 +17,5 @@ deploy:
     - if [[ "$CI_COMMIT_REF_NAME" == "master" ]] || [[ "$CI_COMMIT_REF_NAME" == "main" ]]; then sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "prd"]/g' Dockerfile; else sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile;  fi;
     - cat docker-compose-updated.yaml
   script:
-    # - docker-compose -f docker-compose-updated.yaml up -d --build
+    - docker-compose -f docker-compose-updated.yaml up -d --build
     - echo ${SELFHOST}${SELF_DOMAIN_NAME}.abclive.cloud
