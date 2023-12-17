@@ -14,9 +14,17 @@ deploy:
   before_script:
     - if [[ "$CI_COMMIT_REF_NAME" == "master" ]] || [[ "$CI_COMMIT_REF_NAME" == "main" ]]; then \
       export GIT_BRANCH=''; \
+      echo hhh; \
       sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "prd"]/g' Dockerfile; \
-      else export GIT_BRANCH=-$CI_COMMIT_REF_NAME ; sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile; fi;
+      else \
+      export GIT_BRANCH=-$CI_COMMIT_REF_NAME ;\
+      echo hhh2; \
+      sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile;\
+      fi;
   script:
-    - docker-compose  up -d --build
+    # - docker-compose  up -d --build
+    - echo $GIT_BRANCH
+    - cat Dockerfile
+    - cat docker-compose.yaml
     - echo ${APP}${GIT_BRANCH}.abclive.cloud  
  
