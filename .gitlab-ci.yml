@@ -12,13 +12,12 @@ deploy:
   tags:
     - front-docker-1
   before_script:
-    - if [[ "$CI_COMMIT_REF_NAME" == "master" ]] || [[ "$CI_COMMIT_REF_NAME" == "main" ]]; then \
-      export GIT_BRANCH=''; \
-      echo hhh; \
-      sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "prd"]/g' Dockerfile; \
-      else \
-      export GIT_BRANCH=-$CI_COMMIT_REF_NAME ; \
-      echo hhh2; \
+    - if [[ "$CI_COMMIT_REF_NAME" == "master" ]] || [[ "$CI_COMMIT_REF_NAME" == "main" ]]; then  export GIT_BRANCH=''; 
+      echo hhh; 
+      sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "prd"]/g' Dockerfile; 
+      else 
+      export GIT_BRANCH=-$CI_COMMIT_REF_NAME ; 
+      echo hhh2; 
       sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' Dockerfile; fi;
   script:
     # - docker-compose  up -d --build
