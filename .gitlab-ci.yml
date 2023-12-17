@@ -44,3 +44,4 @@ deploy:
     - cat docker-compose-updated.yaml
   script:
     - docker-compose -f docker-compose-updated.yaml up -d --build
+    - echo ${SELFHOST}${SELF_DOMAIN_NAME}.abclive.cloud
