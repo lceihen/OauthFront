@@ -32,6 +32,9 @@ stages:
 #       - ./
 #       - docker-compose.yml
 
+variables:
+  SELFHOST: "auth"
+
 deploy:
   image: docker/compose:latest
   stage: deploy
@@ -44,4 +47,4 @@ deploy:
     - cat docker-compose-updated.yaml
   script:
     - docker-compose -f docker-compose-updated.yaml up -d --build
-    - echo ${SELFHOST}${SELF_DOMAIN_NAME}.abclive.cloud
+    - echo ${SELFHOST}$CI_COMMIT_REF_NAME.abclive.cloud
