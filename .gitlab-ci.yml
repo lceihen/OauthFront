@@ -23,9 +23,6 @@ deploy:
       sed -i  's/LC-RUNCOMMAND/["pnpm", "run", "beta"]/g' ./deploy/Dockerfile; fi;
   script:
     - docker-compose -f ./deploy/docker-compose.yaml  up -d --build
-    - echo $GIT_BRANCH
-    - cat Dockerfile
-    - cat docker-compose.yaml
     - echo https://${APP}${GIT_BRANCH}.abclive.cloud  
 
 notification:
