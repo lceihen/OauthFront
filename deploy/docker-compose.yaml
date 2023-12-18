@@ -3,7 +3,7 @@ services:
   servername:
     container_name: ${APP}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHORT_SHA}
     build:
-      context: .
+      context: ./deploy
       dockerfile: Dockerfile
     image: ${APP}-${CI_COMMIT_REF_NAME}
     labels:
