@@ -32,4 +32,4 @@ notification:
   tags:
     - shell-1
   script:
-    - source ./depoly/notification.sh
+    - CICD_HOOK_URL=$CICD_HOOK_URL GIT_BRANCH=$GIT_BRANCH . ./depoly/notification.sh
