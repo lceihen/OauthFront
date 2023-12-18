@@ -1,16 +1,12 @@
 FROM node:16.17.0 as builder
 
-RUN ls
-
-RUN pwd
-
 WORKDIR /code
 
 RUN ls
 
 RUN pwd
 
-ADD package.json pnpm-lock.yaml /code/
+ADD ../package.json ../pnpm-lock.yaml /code/
 
 RUN npm config set registry http://registry.npm.taobao.org/
 
@@ -20,7 +16,7 @@ RUN pnpm config set registry https://registry.npm.taobao.org/
 
 RUN pnpm install
 
-ADD . /code
+ADD ../ /code
 
 RUN pnpm run build
 
