@@ -1,8 +1,8 @@
 FROM node:16.17.0 as builder
 
-RUN --no-cache ls
+RUN ls && pwd
 
-RUN --no-cache pwd
+RUN pwd
 
 WORKDIR /code
 
