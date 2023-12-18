@@ -4,6 +4,8 @@ WORKDIR /code
 
 ADD ../package.json ../pnpm-lock.yaml /code/
 
+RUN ls /code
+
 RUN npm config set registry http://registry.npm.taobao.org/
 
 RUN npm install -g pnpm
