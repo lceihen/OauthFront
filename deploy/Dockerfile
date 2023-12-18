@@ -1,9 +1,5 @@
 FROM node:16.17.0 as builder
 
-RUN ls && pwd
-
-RUN pwd
-
 WORKDIR /code
 
 ADD ../package.json ../pnpm-lock.yaml /code/
