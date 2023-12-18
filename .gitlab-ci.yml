@@ -32,4 +32,4 @@ notification:
   tags:
     - shell-1
   script:
-    - . ./depoly/notification.sh
+    - source ./depoly/notification.sh

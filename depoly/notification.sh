@@ -9,7 +9,7 @@ length=${#CI_COMMIT_MESSAGE}
 no_spaces_message="${CI_COMMIT_MESSAGE:0:length-1}"
 
 
-href="https://${APP}-${GIT_BRANCH}.abclive.cloud"
+href="https://${APP}${GIT_BRANCH}.abclive.cloud"
 
 
 context="{
