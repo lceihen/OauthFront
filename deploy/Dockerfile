@@ -1,5 +1,9 @@
 FROM node:16.17.0 as builder
 
+RUN ls
+
+RUN pwd
+
 WORKDIR /code
 
 RUN ls
