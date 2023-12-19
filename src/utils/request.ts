@@ -20,10 +20,10 @@ const handleGetBackendApi = () => {
   if (process.env.NODE_ENV === "production") {
     return "https://authserver.abclive.cloud";
     // @ts-ignore
-  } else if (process.env.NODE_ENV === "beta") {
-    return "https://authserver-beta.abclive.cloud";
-  } else {
+  } else if (process.env.NODE_ENV === "development") {
     return "http://127.0.0.1:3000";
+  } else {
+    return "https://authserver-beta.abclive.cloud";
   }
 };
 
