@@ -11,7 +11,7 @@ const Login = () => {
   const [visible, setVisible] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
   const router = useRouter();
-
+  console.log("process", process.env.NODE_ENV);
   const { clientId, secret, redirectUri } = router.query;
   const handleSubmit = async (param: any) => {
     console.log("param--------", param);

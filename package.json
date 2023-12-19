@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development next dev",
+    "dev": "cross-env APP_ENV=development next dev",
     "build": "next build",
-    "beta": "cross-env NODE_ENV=beta next dev",
-    "start": "cross-env NODE_ENV=production next start",
+    "beta": "cross-env APP_ENV=beta next dev",
+    "start": "cross-env APP_ENV=production next start",
     "lint": "next lint"
   },
   "dependencies": {

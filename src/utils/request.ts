@@ -15,12 +15,12 @@ interface IRequestProps {
   params?: any;
 }
 
-console.log("process.env.NODE_ENV---", process.env.NODE_ENV);
+console.log("process.env.NODE_ENV---", process.env.APP_ENV);
 const handleGetBackendApi = () => {
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.APP_ENV === "production") {
     return "https://authserver.abclive.cloud";
     // @ts-ignore
-  } else if (process.env.NODE_ENV === "development") {
+  } else if (process.env.APP_ENV === "development") {
     return "http://127.0.0.1:3000";
   } else {
     return "https://authserver-beta.abclive.cloud";
