@@ -3,6 +3,7 @@ import { Button, Form, Input, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 import { handleLogin } from "@/api";
+import Cookies from "js-cookie";
 import style from "./index.module.css";
 
 console.log(process.env.NODE_ENV);
@@ -30,7 +31,9 @@ const Login = () => {
 
   useEffect(() => {
     setVisible(true);
+    Cookies.set("appTag", "authWeb");
   }, []);
+
   return visible ? (
     <section className={style.contain}>
       <section className={style.contain_innerContain}>
