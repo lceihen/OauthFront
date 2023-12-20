@@ -18,7 +18,7 @@ interface IRequestProps {
 console.log("process.env.NODE_ENV---", process.env.APP_ENV);
 const handleGetBackendApi = () => {
   if (process.env.APP_ENV === "production") {
-    return "https://authserver.abclive.cloud";
+    return "https://authServer.abclive.cloud";
     // @ts-ignore
   } else if (process.env.APP_ENV === "beta") {
     return "https://authserver-beta.abclive.cloud";
