@@ -6,6 +6,6 @@ export const isProd = process.env.NODE_ENV === "production";
 //   } else if (process.env.NODE_ENV === "development") {
 //     return "http://127.0.0.1:3000";
 //   } else {
-//     return "https://authserver-beta.abclive.cloud";
+//     return "https://authServer-beta.abclive.cloud";
 //   }
 // };

@@ -21,7 +21,7 @@ const handleGetBackendApi = () => {
     return "https://authServer.abclive.cloud";
     // @ts-ignore
   } else if (process.env.APP_ENV === "beta") {
-    return "https://authserver-beta.abclive.cloud";
+    return "https://authServer-beta.abclive.cloud";
   } else {
     return "http://127.0.0.1:3000";
   }
